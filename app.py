@@ -1,6 +1,16 @@
 """Streamlit frontend for the Australian BOM + Groq weather agent."""
 import asyncio
 import os
+import streamlit as st
+for key in [
+    "GROQ_API_KEY",
+    "LANGSMITH_API_KEY",
+    "LANGSMITH_TRACING",
+    "LANGSMITH_PROJECT",
+    "LANGSMITH_ENDPOINT",
+]:
+    if key in st.secrets:
+        os.environ[key] = str(st.secrets[key])
 
 import streamlit as st
 from dotenv import load_dotenv
