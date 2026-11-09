@@ -45,7 +45,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-question = st.chat_input("e.g. How windy will Horsham be tomorrow afternoon?")
+question = st.chat_input("e.g. I want to climb in Grampains. How windy will Grampians be tomorrow afternoon?")
 if question:
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user"):
