@@ -495,7 +495,7 @@ def create_weather_agent(api_key: str | None = None):
     key = api_key or os.getenv("GROQ_API_KEY")
     if not key:
         raise RuntimeError("GROQ_API_KEY is missing. Configure it in environment or Streamlit secrets.")
-    llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0, api_key=key)
+    llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0, api_key=key, model_kwargs={"top_p": 0.1})
     current_date = datetime.now(ZoneInfo("Australia/Melbourne")).strftime("%A, %Y-%m-%d")
     return create_agent(
         model=llm,
