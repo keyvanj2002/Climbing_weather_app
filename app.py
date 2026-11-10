@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 from weather_agent import create_weather_agent
 
-st.set_page_config(page_title="climbing Weather Assistant", page_icon="🌤️", layout="centered")
+st.set_page_config(page_title="Climbing Weather Assistant", page_icon="🌤️", layout="centered")
 st.title("🌤️ climbing Weather Assistant")
 st.caption("daily and hourly weather forecasts for climbers • Powered by LangChain and Groq")
 
