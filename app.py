@@ -1,4 +1,4 @@
-"""Streamlit frontend for the Australian BOM + Groq weather agent."""
+"""Streamlit frontend to help climbers understand best weather windows."""
 import asyncio
 import os
 import streamlit as st
@@ -17,9 +17,9 @@ from dotenv import load_dotenv
 
 from weather_agent import create_weather_agent
 
-st.set_page_config(page_title="Australian Weather Assistant", page_icon="🌤️", layout="centered")
-st.title("🌤️ Australian Weather Assistant")
-st.caption("BOM daily and hourly forecasts • Powered by LangChain and Groq")
+st.set_page_config(page_title="climbing Weather Assistant", page_icon="🌤️", layout="centered")
+st.title("🌤️ climbing Weather Assistant")
+st.caption("daily and hourly weather forecasts for climbers • Powered by LangChain and Groq")
 
 load_dotenv()
 
@@ -32,7 +32,7 @@ def api_key():
 
 with st.sidebar:
     st.subheader("About")
-    st.write("Ask about Australian forecasts, wind, rain, UV, or climbing conditions.")
+    st.write("Ask about climbing forecasts, wind, rain, UV, or other conditions.")
     st.info("Forecasts are not live observations. Hourly coverage can be shorter than daily coverage.")
     if st.button("Clear conversation", use_container_width=True):
         st.session_state.messages = []

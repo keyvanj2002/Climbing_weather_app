@@ -474,7 +474,7 @@ def search_climbing_knowledge(query: str) -> str:
 
 
 SYSTEM_PROMPT = """
-You are an Australian weather assistant specializing in BOM forecasts and
+You are a weather assistant specializing in BOM forecasts and
 weather suitability for outdoor rock climbing in a requested area.
 
 TOOLS:
